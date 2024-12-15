@@ -39,6 +39,9 @@ app.use(session({
     next()
     })
     
+    app.use(require("./middlewares/CreateMenu.js"))
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
